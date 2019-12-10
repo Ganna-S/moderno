@@ -1484,6 +1484,45 @@ button.icon-unsorted {
   @include f500;
   color: $red;
 }
+.price__box {
+  form {
+    .jq-selectbox__select {
+      height: 30px;
+      padding: 0 15px;
+      border: 1px solid #d7d7d7;
+      border-bottom-color: #d7d7d7;
+      border-radius: 0;
+      background: #f9f9f9;
+      box-shadow: none;
+      font-family: "Roboto-Regular", sans-serif;
+      color: #707070;
+      text-shadow: none;
+      line-height: 30px;
+      font-size: 13px;
+
+      .jq-selectbox__select-text {
+        margin-right: 9px;
+      }
+    }
+    .jq-selectbox__trigger-arrow {
+      border: none;
+      top: 0;
+      right: 15px;
+      line-height: 30px;
+      width: 0;
+      font-size: 13px;
+      &::before {
+        font-family: "icomoon";
+        content: "\f0d7";
+        color: $green;
+      }
+    }
+    .jq-selectbox__trigger {
+      border-left: none;
+    }
+  }
+}
+
 .product__price {
   button {
     margin-bottom: 7px;
@@ -1886,6 +1925,10 @@ select {
   padding: 0 10px;
   color: #707070;
 }
+.upload-line .jq-selectbox,
+.settings__line .jq-selectbox {
+  width: 540px;
+}
 //end settings
 
 //start profile
@@ -2013,7 +2056,7 @@ select {
       font-weight: 500;
       color: #707070;
       position: relative;
-      &.active::before{
+      &.active::before {
         color: $green;
       }
       &::before {
@@ -2075,5 +2118,144 @@ select {
 }
 
 //end profile
+
+//start upload
+.upload__inner {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 110px;
+  button {
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 36px;
+    margin-left: 175px;
+    cursor: pointer;
+  }
+}
+.upload__inner-title {
+  padding: 16px 35px 18px;
+  @include f500;
+  font-size: 24px;
+  color: $bg;
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 40px;
+}
+.upload__inner-content {
+  margin-bottom: 30px;
+  padding-left: 45px;
+  padding-right: 50px;
+}
+.upload-line,
+.settings__line {
+  margin-bottom: 25px;
+  display: flex;
+  label {
+    min-width: 175px;
+    padding-top: 5px;
+    padding-right: 15px;
+    color: #444;
+    span {
+      color: $green;
+    }
+    &::placeholder {
+      color: #707070;
+    }
+  }
+  select,
+  input,
+  textarea {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+  }
+  textarea {
+    resize: none;
+    height: 150px;
+    padding: 0px 18px;
+  }
+  input[type="file"] {
+    outline: none;
+  }
+  .jq-file__browse {
+    position: absolute;
+    top: 5px;
+    right: auto;
+    left: 9px;
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0 12px;
+    border: 1px solid #d7d7d7;
+    border-left: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    text-shadow: none;
+    color: #444;
+  }
+  .jq-file {
+    width: 100%;
+    padding: 0px 18px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+  }
+  .jq-file__name {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40x;
+    margin-left: 100px;
+    padding: 0;
+    border: none;
+    border-bottom-color: transparent;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: none;
+    font-size: 12px;
+    color: #707070;
+    line-height: 40px;
+  }
+  .jq-selectbox {
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: "Roboto-Regular", sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    width: 0;
+    font-size: 15px;
+    &::before {
+      font-family: "icomoon";
+      content: "\f0d7";
+    }
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+  .jq-selectbox__dropdown {
+    top: 40px;
+  }
+}
+
+//end upload
 
 @import "media";
